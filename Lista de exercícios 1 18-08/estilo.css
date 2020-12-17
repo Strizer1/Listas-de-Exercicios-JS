@@ -1,0 +1,88 @@
+#titulo {
+    font-size: 4em;
+    background-color: rgb(110, 186, 216);
+    height: 80px;
+    width: 650px;
+    border-radius: 12px;
+    margin-left: 450px;
+    text-align: center;
+}
+body {
+    background-color: rgb(67, 216, 216);
+}
+.exercicios {
+    background-color: white;
+    height: 80px;
+    width: 170px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 10px;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    padding-top: 40px;
+}
+#geral {
+    margin: 20px 200px 20px 270px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.exercicios:hover {
+    font-size: 29px;
+    color: rgb(67, 216, 216);
+    font-weight: bold;
+}
+
+#calculo {
+    position: absolute;
+    top: 460px;
+    left: 289px;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#shiro {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    left: 30px;
+    top: 20px;
+}
+
+#yato {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 1100px;
+    top: 10px
+}
+
+#hinata {
+    width: 240px;
+    height: 350px;
+    position: absolute;
+    left: 1250px;
+    top: 80px
+}
+
+#kirito {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 300px;
+    top: 10px
+}
+
+#miku {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 30px;
+    top: 300px
+}

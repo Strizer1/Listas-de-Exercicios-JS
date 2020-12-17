@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lista 1 - Exercício 5</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css"/>
+    </head>
+    <body>
+        <h1 id="titulo">Lista de exercícios 01</h1>
+        <div id="geral">
+            <a class="links" href="lista1-exe1.html">
+                <div class="exercicios">Exercício 1</div>
+            </a>
+            <a class="links" href="lista1-exe2.html">
+                <div class="exercicios">Exercício 2</div>
+            </a>
+            <a class="links" href="lista1-exe3.html">
+                <div class="exercicios">Exercício 3</div>
+            </a>
+            <a class="links" href="lista1-exe4.html">
+                <div class="exercicios">Exercício 4</div>
+            </a>
+            <a class="links" href="lista1-exe5.html">
+                <div class="exercicios">Exercício 5</div>
+            </a>
+            <a class="links" href="lista1-exe6.html">
+                <div class="exercicios">Exercício 6</div>
+            </a>
+            <a class="links" href="lista1-exe7.html">
+                <div class="exercicios">Exercício 7</div>
+            </a>
+            <a class="links" href="lista1-exe8.html">
+                <div class="exercicios">Exercício 8</div>
+            </a>
+            <a class="links" href="lista1-exe9.html">
+                <div class="exercicios">Exercício 9</div>
+            </a>
+            <a class="links" href="lista1-exe10.html">
+                <div class="exercicios">Exercício 10</div>
+            </a>
+        </div>
+        <img src="img/Shiro.png" id="shiro">
+        <img src="img/miku.png" id="miku">
+        <img src="img/kirito.png" id="kirito">
+        <img src="img/Yato.png" id="yato">
+        <img src="img/hinata.png" id="hinata">
+
+        <div id="calculo">
+        <h2>Exercício 5 - Novo preço produto</h2>
+        <h3>
+            Preço do produto <input type="number" id="preco"/>
+        </h3>
+        <h3>
+            <button type="button" onclick="calcular()"> Calcular </button>
+        </h3>
+        <h3 id="resultado">
+
+        </h3>
+        </div>
+        <script>
+            function calcular() {
+                // recupera os dados do usuário
+                var preco = Number(document.getElementById('preco').value)
+                // novo preço
+                var resultado = preco * 0.9
+                // mostra para o usuário
+                document.getElementById('resultado').innerHTML = `O novo valor desse produto é de ${resultado}`
+            }
+        </script>
+    </body>
+</html>

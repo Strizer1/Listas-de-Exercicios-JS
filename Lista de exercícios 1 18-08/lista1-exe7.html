@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lista 1 - Exercício 7</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css"/>
+</head>
+<body>
+    <h1 id="titulo">Lista de exercícios 01</h1>
+    <div id="geral">
+        <a class="links" href="lista1-exe1.html">
+            <div class="exercicios">Exercício 1</div>
+        </a>
+        <a class="links" href="lista1-exe2.html">
+            <div class="exercicios">Exercício 2</div>
+        </a>
+        <a class="links" href="lista1-exe3.html">
+            <div class="exercicios">Exercício 3</div>
+        </a>
+        <a class="links" href="lista1-exe4.html">
+            <div class="exercicios">Exercício 4</div>
+        </a>
+        <a class="links" href="lista1-exe5.html">
+            <div class="exercicios">Exercício 5</div>
+        </a>
+        <a class="links" href="lista1-exe6.html">
+            <div class="exercicios">Exercício 6</div>
+        </a>
+        <a class="links" href="lista1-exe7.html">
+            <div class="exercicios">Exercício 7</div>
+        </a>
+        <a class="links" href="lista1-exe8.html">
+            <div class="exercicios">Exercício 8</div>
+        </a>
+        <a class="links" href="lista1-exe9.html">
+            <div class="exercicios">Exercício 9</div>
+        </a>
+        <a class="links" href="lista1-exe10.html">
+            <div class="exercicios">Exercício 10</div>
+        </a>
+    </div>
+    <img src="img/Shiro.png" id="shiro">
+    <img src="img/miku.png" id="miku">
+    <img src="img/kirito.png" id="kirito">
+    <img src="img/Yato.png" id="yato">
+    <img src="img/hinata.png" id="hinata">
+
+    <div id="calculo">
+    <h2>Exercício 7 - Engordar e emagrecer</h2>
+    <h3>
+        Peso <input type="number" id="peso"/>
+    </h3>
+    <h3>
+        <button type="button" onclick="calcular()"> Calcular </button>
+    </h3>
+    <h3>
+        <p id="emagrece">
+
+        </p>
+        <p id="engorda">
+
+        </p>
+    </h3>
+    </div>
+    <script>
+        function calcular() {
+            // recebe o dado do usuário
+            var peso = Number(document.getElementById('peso').value)
+            // calcula resultado
+            var emagrece = peso - (20 * peso) / 100
+            var engorda = peso + (15 * peso) / 100
+            document.getElementById('emagrece').innerHTML = `Novo valor ${emagrece}`
+            document.getElementById('engorda').innerHTML = `Novo valor ${engorda}`
+        }
+    </script>
+</body>
+</html>

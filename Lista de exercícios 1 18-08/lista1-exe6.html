@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> <!-- navegador identificar acentos e cedilha-->
+        <title> Lista 1 - Exercício 6</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css"/>
+    </head>
+    <body>
+        <h1 id="titulo">Lista de exercícios 01</h1>
+        <div id="geral">
+            <a class="links" href="lista1-exe1.html">
+                <div class="exercicios">Exercício 1</div>
+            </a>
+            <a class="links" href="lista1-exe2.html">
+                <div class="exercicios">Exercício 2</div>
+            </a>
+            <a class="links" href="lista1-exe3.html">
+                <div class="exercicios">Exercício 3</div>
+            </a>
+            <a class="links" href="lista1-exe4.html">
+                <div class="exercicios">Exercício 4</div>
+            </a>
+            <a class="links" href="lista1-exe5.html">
+                <div class="exercicios">Exercício 5</div>
+            </a>
+            <a class="links" href="lista1-exe6.html">
+                <div class="exercicios">Exercício 6</div>
+            </a>
+            <a class="links" href="lista1-exe7.html">
+                <div class="exercicios">Exercício 7</div>
+            </a>
+            <a class="links" href="lista1-exe8.html">
+                <div class="exercicios">Exercício 8</div>
+            </a>
+            <a class="links" href="lista1-exe9.html">
+                <div class="exercicios">Exercício 9</div>
+            </a>
+            <a class="links" href="lista1-exe10.html">
+                <div class="exercicios">Exercício 10</div>
+            </a>
+        </div>
+        <img src="img/Shiro.png" id="shiro">
+        <img src="img/miku.png" id="miku">
+        <img src="img/kirito.png" id="kirito">
+        <img src="img/Yato.png" id="yato">
+        <img src="img/hinata.png" id="hinata">
+
+        <div id="calculo">
+        <h2>Exercício 6 - Comissão</h2>
+        <h3>
+            Salário fixo <input type="number" id="salarioFixo"/>
+        </h3>
+        <h3>
+            Valor das vendas <input type="number" id="vendas"/>
+        </h3>
+        <h3>
+            <button type="button" onclick="calcular()"> Calcular </button>
+        </h3>
+        <h3>
+            <p id="r1">
+
+            </p>
+            <p id="r2">
+
+            </p>
+        </h3>
+        </div>
+        <script>
+            function calcular () {
+                // recupera os dados do usuário
+                // se os dados forem número, vamos converter usando a função number()
+                var salarioFixo = Number(document.getElementById('salarioFixo').value)
+                var vendas = Number(document.getElementById('vendas').value)
+                // calculo comissão
+                var comissao = (vendas * 4) / 100
+                // calcula salário final
+                var salarioFinal = salarioFixo + comissao
+                // devolve resultado para usuário
+                document.getElementById('r1').innerHTML = `Comissão: R$ ${comissao.toFixed(2)}` 
+                document.getElementById('r2').innerHTML =  `Salário final R$ ${salarioFinal.toFixed(2)}` //To fixed coloca casas depois da virgula
+            }
+        </script>
+    </body>
+</html>
