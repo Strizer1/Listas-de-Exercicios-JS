@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Lista 2 - Exercício 5</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css"/>
+    </head>
+    <body>
+        <h1 id="titulo">Lista de exercícios 02</h1>
+        <div id="geral">
+            <a class="links" href="lista2-exe1.html">
+                <div class="exercicios">Exercício 1</div>
+            </a>
+            <a class="links" href="lista2-exe2.html">
+                <div class="exercicios">Exercício 2</div>
+            </a>
+            <a class="links" href="lista2-exe3.html">
+                <div class="exercicios">Exercício 3</div>
+            </a>
+            <a class="links" href="lista2-exe4.html">
+                <div class="exercicios">Exercício 4</div>
+            </a>
+            <a class="links" href="lista2-exe5.html">
+                <div class="exercicios">Exercício 5</div>
+            </a>
+            <a class="links" href="lista2-exe6.html">
+                <div class="exercicios">Exercício 6</div>
+            </a>
+            <a class="links" href="lista2-exe7.html">
+                <div class="exercicios">Exercício 7</div>
+            </a>
+            <a class="links" href="lista2-exe8.html">
+                <div class="exercicios">Exercício 8</div>
+            </a>
+            <a class="links" href="lista2-exe9.html">
+                <div class="exercicios">Exercício 9</div>
+            </a>
+            <a class="links" href="lista2-exe10.html">
+                <div class="exercicios">Exercício 10</div>
+            </a>
+            <a class="links" href="lista2-exe22.html">
+                <div class="exercicios">Exercício 22</div>
+            </a>
+            <a class="links" href="lista2-exe23.html">
+                <div class="exercicios">Exercício 23</div>
+            </a>
+        </div>
+        <img src="img/sora.png" id="sora">
+        <img src="img/red.png" id="red">
+        <img src="img/pikachu.png" id="pikachu">
+        <img src="img/ed.png" id="ed">
+        <img src="img/naruto.png" id="naruto">
+
+        <div id="calculo">
+        <h2> Exercício 5 - Escolha </h2>
+        <h3>
+            Informe um número <input type="number" id="n1"/>
+        </h3>
+        <h3>
+            Informe outro número <input type="number" id="n2"/>
+        </h3>
+        <h3>
+            Escolha uma opção: </br></br> 1. Média 2. Subtração 3. Produto 4. Divisão <input type="number" id="opcao"/>
+        </h3>
+        <h3>
+            <button type="button" onclick="calcular()"> Calcular </button>
+        </h3>
+        <h3 id="resultado">
+
+        </h3>
+        </div>
+        <script>
+            function calcular () {
+            // recupera os dados do usuário
+            var n1 = Number(document.getElementById('n1').value)
+            var n2 = Number(document.getElementById('n2').value)
+            var opcao = Number(document.getElementById('opcao').value)
+            // calcular
+            var resultado // guarda o resultado da operação
+            switch(opcao) {
+                case 1: resultado = (n1 + n2) / 2
+                    break
+                case 2: if (n1 > n2) {
+                            resultado = n1 - n2
+                        } else {
+                            resultado = n2 - n1
+                        }
+                    break
+                case 3: resultado = n1 * n2
+                    break
+                case 4: if (n2 != 0) {
+                            resultado = n1 / n2
+                        } else {
+                            resultado = "Não é possível divisão por zero"
+                        }
+                    break
+                default: //Caso não tenha entrado em nenhuma opção
+                        resultado = "Opção inválida"
+            }
+            // mostra para usuário
+            document.getElementById('resultado').innerHTML = resultado
+        }
+        </script>
+    </body>
+</html>

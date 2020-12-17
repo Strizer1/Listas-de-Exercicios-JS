@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lista 2 exercício 6</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css"/>
+    </head>
+    <body>
+        <h1 id="titulo">Lista de exercícios 02</h1>
+        <div id="geral">
+            <a class="links" href="lista2-exe1.html">
+                <div class="exercicios">Exercício 1</div>
+            </a>
+            <a class="links" href="lista2-exe2.html">
+                <div class="exercicios">Exercício 2</div>
+            </a>
+            <a class="links" href="lista2-exe3.html">
+                <div class="exercicios">Exercício 3</div>
+            </a>
+            <a class="links" href="lista2-exe4.html">
+                <div class="exercicios">Exercício 4</div>
+            </a>
+            <a class="links" href="lista2-exe5.html">
+                <div class="exercicios">Exercício 5</div>
+            </a>
+            <a class="links" href="lista2-exe6.html">
+                <div class="exercicios">Exercício 6</div>
+            </a>
+            <a class="links" href="lista2-exe7.html">
+                <div class="exercicios">Exercício 7</div>
+            </a>
+            <a class="links" href="lista2-exe8.html">
+                <div class="exercicios">Exercício 8</div>
+            </a>
+            <a class="links" href="lista2-exe9.html">
+                <div class="exercicios">Exercício 9</div>
+            </a>
+            <a class="links" href="lista2-exe10.html">
+                <div class="exercicios">Exercício 10</div>
+            </a>
+            <a class="links" href="lista2-exe22.html">
+                <div class="exercicios">Exercício 22</div>
+            </a>
+            <a class="links" href="lista2-exe23.html">
+                <div class="exercicios">Exercício 23</div>
+            </a>
+        </div>
+        <img src="img/sora.png" id="sora">
+        <img src="img/red.png" id="red">
+        <img src="img/pikachu.png" id="pikachu">
+        <img src="img/ed.png" id="ed">
+        <img src="img/naruto.png" id="naruto">
+
+        <div id="calculo">
+        <h2> Exercício 6 - Escolha </h2>
+        <h3>
+            Escolha uma das opções abaixo
+            <h4>
+                <ol>
+                    <li>Primeiro número elevado ao segundo número</li>
+                    <li>Raiz quadrada de cada um dos números</li>
+                    <li>Raiz cúbica de cada um dos números</li>
+                </ol>
+            </h4>
+        </h3>
+        <h3>
+            Número 1 <input type="number" id="n1">
+        </h3>
+        <h3>
+            Número 2 <input type="number" id="n2">
+        </h3>
+        <h3>
+            <select id="opcao">
+                <option value="1"> Opção 1 </option>
+                <option value="2"> Opção 2 </option>
+                <option value="3"> Opção 3 </option>
+            </select>
+        </h3>
+        <h3>
+            <button type="button" onclick="calcular()"> Calcular </button>
+        </h3>
+        <h3 id="resultado">
+
+        </h3>
+        </div>
+        <script>
+            function calcular() {
+                // entrada de dados
+                let n1 = Number(document.getElementById('n1').value)
+                let n2 = Number(document.getElementById('n2').value)
+                let opcao = Number(document.getElementById("opcao").value)
+                let resultado
+                switch(opcao) {
+                    case 1: resultado = `Exponenciação ${Math.pow(n1, n2)}`
+                        break
+                    case 2: resultado = `Raiz quadrada ${Math.sqrt(n1)} - ${Math.sqrt(n2)}`
+                        break
+                    case 3: resultado - `Raiz cúbica ${Math.cbrt(n1)} - ${Math.cbrt(n2)}`
+                        break
+                    default: resultado = 'Opção inválida'
+                }
+                document.getElementById("resultado").innerHTML = resultado
+            }
+        </script>
+    </body>
+</html>
